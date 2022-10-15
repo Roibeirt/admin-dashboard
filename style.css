@@ -7,10 +7,9 @@
 
 body{
     display: grid;
-    grid-template-columns: minmax(120px, .8fr) repeat(4, 1fr);
+    grid-template-columns: minmax(186px, .8fr) repeat(4, 1fr);
     grid-template-rows: minmax(100px, .8fr) repeat(4, 1fr);
-    width:100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #sidebar{
@@ -39,6 +38,27 @@ body{
 
 }
 
+#header{
+
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1.5fr;
+}
+
+#search-tab{
+    grid-area: 1/1/1/7;
+}
+
+#alert-profile{
+    grid-area: 1/8/1/11;
+}
+
+#card-content{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
 /* Content Layout */
 
 #sidebar{
@@ -54,6 +74,33 @@ body{
     margin-top: 2em;
 }
 
+.sidebar-tabs{
+    display:flex;
+    align-items: center;
+    margin-top: 0.25em;
+}
+
+.material-icons{
+    margin-right: .25em;
+}
+
+#search-tab{
+    display: flex;
+    align-items: center;
+    margin: .5em 0 0 .5em;
+}
+
+#search-bar{
+    width: 100%;
+    height: 2em;
+}
+
+#alert-profile{
+    display: flex;
+    align-items: center;
+}
+
+
 /*Content Styling*/
 
 #sidebar{
@@ -67,4 +114,14 @@ body{
 
 #sidebar{
     color: white;
+}
+
+#search-bar{
+
+    border: 0;
+    border-radius: 1em;
+
+}
+#alert-profile img{
+    width: 3em;
 }
