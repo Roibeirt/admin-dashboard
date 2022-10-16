@@ -9,7 +9,7 @@ body{
     display: grid;
     grid-template-columns: minmax(186px, .8fr) repeat(4, 1fr);
     grid-template-rows: minmax(100px, .8fr) repeat(4, 1fr);
-    min-height: 100vh;
+    height: 100vh;
 }
 
 #sidebar{
@@ -64,6 +64,10 @@ body{
 #sidebar{
     display: flex;
     flex-direction: column;
+
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-top: 1em;
 }
 
 #tabs{
@@ -98,15 +102,17 @@ body{
 #alert-profile{
     display: flex;
     align-items: center;
+    margin-left: auto;
+    padding-right: 20%;
 }
+
+#alert-profile > *{
+    padding-right: .5em;
+}
+
 
 
 /*Content Styling*/
-
-#sidebar{
-    padding-left: 1em;
-    padding-top: 1em;
-}
 
 #logo{
     font-size: 30px;
@@ -117,11 +123,19 @@ body{
 }
 
 #search-bar{
-
     border: 0;
     border-radius: 1em;
-
+    padding-left: 1em;
 }
+
+#search-tab{
+    color: white;
+}
+
+#alert-profile{
+    color: white;
+}
+
 #alert-profile img{
     width: 3em;
 }
